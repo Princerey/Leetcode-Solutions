@@ -1,20 +1,13 @@
 class Solution {
 public:
-    int majorityElement(vector<int>& nums) 
-    {
-        int c =1;
-        int element = nums[0];
-        for(int i=1; i<nums.size(); i++) 
-        {
-            if(nums[i]== element) 
-                c++;             
-            else                  
-            {
-                c--;               
-                if(c==0)
-                    element = nums[i+1];
+    int majorityElement(vector<int>& nums) {
+        unordered_map<int,int>umap;
+        for(int i=0;i<nums.size();i++){
+            umap[nums[i]]++;
+            if(umap[nums[i]]>nums.size()/2){
+                return nums[i];
             }
         }
-        return element;
+        return 0;
     }
 };
