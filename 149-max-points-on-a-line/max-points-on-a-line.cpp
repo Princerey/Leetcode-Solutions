@@ -1,7 +1,3 @@
-/**
- * Author: Mahmoud Gadallah
- * LeetCode Account: https://leetcode.com/m7moudGadallah/
-*/
 #include<bits/stdc++.h>
 
 using namespace std;
